@@ -1,14 +1,16 @@
 <template>
   <div>
-    <h1>Hello {{ props.greetings }}</h1>
-    <p>It's single component</p>
+    <h1>Hello {{ greetings }}</h1>
+    <p>{{ greetingMessage }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
   interface Props {
-    greetings: string
+    greetings?: string
+    // declare long prop menggunakan camelCase untuk menghindari tanda kutip saat menggunakannya sebagai property keys
+    greetingMessage: string
   }
 
-  const props = defineProps<Props>()
+  const { greetings = 'guest' } = defineProps<Props>()
 </script>
