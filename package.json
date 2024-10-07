@@ -13,5 +13,8 @@
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "git-commit-msg-linter": "^5.0.8"
   }
 }
